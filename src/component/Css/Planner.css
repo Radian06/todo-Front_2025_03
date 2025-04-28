@@ -1,0 +1,116 @@
+.planner_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.quote_container {
+    width: 45%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2.5vw;
+}
+
+.quote_box {
+    width: 100%;
+    height: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 0.4vw solid #B2BEFF;
+    border-radius: 3vw;
+}
+
+.quote_title {
+    font-family: "Pretendard-Regular", sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+    color: #100C3F;
+    margin-top: 10%
+}
+
+.quote_subscribe {
+    font-family: "Pretendard-Regular", sans-serif;
+    font-size: 3.5vh;
+}
+
+.quote_writer {
+    font-family: "Pretendard-Regular", sans-serif;
+    font-size: 2vh;
+    margin-bottom: 10%;
+}
+
+.inputTT {
+    width: 50%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B2BEFF;
+    border-radius: 1vw;
+    color: white;
+    color: white;
+    font-family: "Pretendard-Regular", sans-serif;
+    font-size: 3vh;
+    margin-top: 5%;
+}
+
+.deleteTT {
+    width: 50%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFB0B0;
+    border-radius: 1vw;
+    color: white;
+    font-family: "Pretendard-Regular", sans-serif;
+    font-size: 3vh;
+    margin-top: 5%;
+}
+
+.timeTable_container {
+    width: 45%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 2.5vw;
+}
+
+.planner_title {
+    height: 20%;
+    font-size: 3vh;
+    font-weight: bold;
+    color: #504D7C;
+}
+  
+.planner_grid {
+    display: grid;
+    grid-template-columns: 8vw repeat(6, 1fr); /* 시간 + 4칸 */
+    border: 0.3vh solid #504D7C;
+    border-collapse: collapse;
+}
+  
+.time_cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1vh solid #504D7C;
+    color: #100C3F;
+    font-size: 2vh;
+}
+  
+.plan_cell {
+    height: 3.08vh;
+    border: 0.1vh solid #504D7C;
+    background-color: #fff;
+    cursor: pointer;
+}
+  

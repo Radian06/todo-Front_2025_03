@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'ghanachoco';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFE9E2;
+}
+
+.layout_box {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  background-color: white;
+  border-radius: 3vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+}
+
+.menu_box {
+  width: 20%;
+  height: 100%-5vh;
+  background-color: #EAF0FF;
+  border-radius: 3vw 0 0 3vw;
+  padding-top: 6vh;
+}
+
+.menu_title {
+  font-family: "ghanachoco";
+  font-size: 2vw;
+  color: #100C3F;
+  justify-self: center;
+  margin-bottom: 10vh;
+}
+
+.menu_nav {
+  display: block; /* 핵심 추가 */
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 1vw;
+  margin-left: 3vw;
+  margin-top: 5vh;
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 기본 색상 상속 */
+}
+
+.content {
+  width: 80%;
+  height: 100%;
+}
