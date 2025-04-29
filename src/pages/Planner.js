@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Layout from "../component/Layout";
 import "../component/Css/Planner.css";
-import PlannerSet from "../component/PlannerSet"; // 추가
-import PlannerTimer from "../component/PlannerTimer"; // 추가
+import PlannerSet from "../component/PlannerSet";
+import PlannerTimer from "../component/PlannerTimer";
 
 const hours = Array.from({ length: 24 }, (_, i) => {
-  const hour = (i + 4) % 24; // 04:00 ~ 03:00
+  const hour = (i + 4) % 24;
   const nextHour = (hour + 1) % 24;
   return `${hour.toString().padStart(2, '0')}:00~${nextHour.toString().padStart(2, '0')}:00`;
 });
@@ -13,11 +13,14 @@ const hours = Array.from({ length: 24 }, (_, i) => {
 function Planner() {
   const [isSetOpen, setIsSetOpen] = useState(false);
   const [isTimerOpen, setIsTimerOpen] = useState(false);
+  const [plannerName, setPlannerName] = useState(''); // ✨ 추가!
 
   const openSetModal = () => setIsSetOpen(true);
   const closeSetModal = () => setIsSetOpen(false);
 
-  const openTimerModal = () => {
+  // ✨ 수정된 부분
+  const handleStart = (name) => {
+    setPlannerName(name); // 이름 저장
     setIsSetOpen(false);
     setIsTimerOpen(true);
   };
@@ -58,9 +61,9 @@ function Planner() {
           </div>
         </div>
 
-        {/* ✨ 모달 추가 */}
-        <PlannerSet isOpen={isSetOpen} onClose={closeSetModal} onStart={openTimerModal} />
-        <PlannerTimer isOpen={isTimerOpen} onClose={closeTimerModal} />
+        {/* ✨ 수정된 모달 */}
+        <PlannerSet isOpen={isSetOpen} onClose={closeSetModal} onStart={handleStart} />
+        <PlannerTimer isOpen={isTimerOpen} onClose={closeTimerModal} name={plannerName} />
       </div>
     </Layout>
   );

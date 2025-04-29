@@ -9,8 +9,8 @@ const PlannerSet = ({ isOpen, onClose, onStart }) => {
   if (!isOpen) return null;
 
   const handleStart = () => {
-    onStart(); // PlannerTimer 열기
-  };
+    onStart(name);
+  };  
 
   return (
     <div className="modal_overlay" onClick={onClose}>
